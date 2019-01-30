@@ -63,7 +63,7 @@ class App extends Component {
 
    calculateFaceLocation = (data) => {
     if (data === 'nope') {
-       this.setState({errorMessage: `Face recognition API doesn't work with URLs starting with "data:"`})
+       this.setState({errorMessage: `Face recognition API only works with URLs starting with "http"`})
     }
     const detectFace = data.outputs[0].data.regions[0].region_info.bounding_box;
     const image = document.getElementById('inputImage');
